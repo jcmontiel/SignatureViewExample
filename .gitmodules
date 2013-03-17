@@ -1,0 +1,3 @@
+[submodule "SignatureView"]
+	path = SignatureView
+	url = git@github.com:jcmontiel/SignatureView.git
