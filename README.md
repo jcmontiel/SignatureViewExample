@@ -6,7 +6,7 @@ This is a sample project on how to implement the SignatureView, that you can fin
 HOW TO USE IT
 -------------
 
-You must add the OpenGLES.framework and QuartzCore.framework to the Xcode project.
+You must add the OpenGLES.framework and QuartzCore.framework to the Xcode project. Implement the SignatureView repository as git sub module.
 
 EXAMPLE
 -------
