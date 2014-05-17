@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
                 <outlet property="signatureController" destination="D8Y-35-PUA" id="Gyx-3C-P9y"/>
+                <outlet property="signatureController2" destination="hHn-dt-I4Y" id="twr-rC-aDR"/>
                 <outlet property="view" destination="6" id="7"/>
             </connections>
         </placeholder>
@@ -22,7 +23,21 @@
                 <outlet property="delegate" destination="-1" id="0J5-Fb-KvL"/>
                 <outlet property="signButton" destination="0wU-gG-v7H" id="eCX-F0-qf1"/>
                 <outlet property="signatureTextField" destination="XiV-cE-8LA" id="9NF-33-xbR"/>
-                <outlet property="view" destination="8" id="DaA-fK-kZQ"/>
+                <outlet property="view" destination="8" id="dPM-N9-4x9"/>
+            </connections>
+        </viewController>
+        <viewController id="hHn-dt-I4Y" userLabel="Signature View Controller 2" customClass="SignatureViewController">
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="clearButton" destination="nWP-9S-Mmx" id="ofV-rg-Ox1"/>
+                <outlet property="delegate" destination="-1" id="wFJ-4x-kVz"/>
+                <outlet property="signButton" destination="CxX-Zg-wZw" id="1k7-hU-sZQ"/>
+                <outlet property="signatureTextField" destination="nkj-zG-ODs" id="ggK-DX-y08"/>
+                <outlet property="view" destination="ZiO-1l-jdB" id="A1N-6d-msB"/>
             </connections>
         </viewController>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -30,8 +45,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="90" translatesAutoresizingMaskIntoConstraints="NO" id="8" customClass="SignatureView">
-                    <rect key="frame" x="20" y="315" width="280" height="90"/>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="90" translatesAutoresizingMaskIntoConstraints="NO" id="8" userLabel="Signature View 1" customClass="SignatureView">
+                    <rect key="frame" x="20" y="100" width="280" height="90"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sign inside the box" borderStyle="line" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="XiV-cE-8LA">
@@ -56,7 +71,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jE2-4g-YKD">
-                    <rect key="frame" x="20" y="413" width="140" height="30"/>
+                    <rect key="frame" x="20" y="200" width="140" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Clear">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,7 +81,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wU-gG-v7H">
-                    <rect key="frame" x="160" y="413" width="140" height="30"/>
+                    <rect key="frame" x="160" y="200" width="140" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                     <state key="normal" title="Sign">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,21 +90,74 @@
                         <action selector="signatureSignTapped:" destination="D8Y-35-PUA" eventType="touchUpInside" id="EBP-ak-Z3A"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="90" translatesAutoresizingMaskIntoConstraints="NO" id="ZiO-1l-jdB" userLabel="Signature View 2" customClass="SignatureView">
+                    <rect key="frame" x="20" y="270" width="280" height="90"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sign inside the box" borderStyle="line" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="nkj-zG-ODs">
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="90"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                            </accessibility>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="nkj-zG-ODs" firstAttribute="top" secondItem="ZiO-1l-jdB" secondAttribute="top" id="2Ds-16-0rJ"/>
+                        <constraint firstAttribute="trailing" secondItem="nkj-zG-ODs" secondAttribute="trailing" id="6e1-JC-4zg"/>
+                        <constraint firstItem="nkj-zG-ODs" firstAttribute="leading" secondItem="ZiO-1l-jdB" secondAttribute="leading" id="Gxi-n3-mYr"/>
+                        <constraint firstAttribute="bottom" secondItem="nkj-zG-ODs" secondAttribute="bottom" id="UzH-TS-ORT"/>
+                        <constraint firstAttribute="width" constant="280" id="Z96-sL-lre"/>
+                        <constraint firstAttribute="height" constant="90" id="xTf-MR-DmE"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWP-9S-Mmx">
+                    <rect key="frame" x="20" y="368" width="140" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Clear">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="signatureClearTapped:" destination="hHn-dt-I4Y" eventType="touchUpInside" id="QAc-cN-JTs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxX-Zg-wZw">
+                    <rect key="frame" x="160" y="368" width="140" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <state key="normal" title="Sign">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="signatureSignTapped:" destination="hHn-dt-I4Y" eventType="touchUpInside" id="bAX-Kf-zDJ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="0wU-gG-v7H" firstAttribute="height" secondItem="jE2-4g-YKD" secondAttribute="height" id="03F-rI-89y"/>
+                <constraint firstItem="nWP-9S-Mmx" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" id="1ZI-xk-kUw"/>
+                <constraint firstItem="CxX-Zg-wZw" firstAttribute="width" secondItem="nWP-9S-Mmx" secondAttribute="width" id="6Ir-KK-jdL"/>
+                <constraint firstItem="CxX-Zg-wZw" firstAttribute="leading" secondItem="nWP-9S-Mmx" secondAttribute="trailing" id="6bX-6V-faA"/>
                 <constraint firstItem="jE2-4g-YKD" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" id="C9k-1Q-gvO"/>
                 <constraint firstItem="0wU-gG-v7H" firstAttribute="top" secondItem="jE2-4g-YKD" secondAttribute="top" id="FrW-uE-Xmc"/>
                 <constraint firstItem="0wU-gG-v7H" firstAttribute="width" secondItem="jE2-4g-YKD" secondAttribute="width" id="IgK-qV-qYI"/>
-                <constraint firstAttribute="bottom" secondItem="jE2-4g-YKD" secondAttribute="bottom" constant="37" id="Kew-tv-Rho"/>
                 <constraint firstAttribute="centerX" secondItem="8" secondAttribute="centerX" id="LyT-Bn-smu"/>
                 <constraint firstItem="0wU-gG-v7H" firstAttribute="leading" secondItem="jE2-4g-YKD" secondAttribute="trailing" id="Nr5-b0-Vpf"/>
-                <constraint firstAttribute="bottom" secondItem="0wU-gG-v7H" secondAttribute="bottom" constant="37" id="PmG-jD-eXl"/>
+                <constraint firstAttribute="centerX" secondItem="ZiO-1l-jdB" secondAttribute="centerX" id="Vci-4m-aUO"/>
+                <constraint firstItem="ZiO-1l-jdB" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="80" id="W5S-cj-yhZ"/>
+                <constraint firstItem="CxX-Zg-wZw" firstAttribute="height" secondItem="nWP-9S-Mmx" secondAttribute="height" id="aaY-yY-JWY"/>
                 <constraint firstItem="8" firstAttribute="trailing" secondItem="0wU-gG-v7H" secondAttribute="trailing" id="atW-tV-4bg"/>
-                <constraint firstItem="jE2-4g-YKD" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="8" id="bLj-mE-5QJ"/>
                 <constraint firstAttribute="trailing" secondItem="0wU-gG-v7H" secondAttribute="trailing" constant="20" id="cIP-Ua-P20"/>
                 <constraint firstItem="8" firstAttribute="leading" secondItem="jE2-4g-YKD" secondAttribute="leading" id="fcX-GH-deV"/>
+                <constraint firstItem="8" firstAttribute="top" secondItem="6" secondAttribute="top" constant="100" id="gJe-uY-F8s"/>
+                <constraint firstItem="jE2-4g-YKD" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="10" id="nWR-ay-Y8x"/>
+                <constraint firstItem="nWP-9S-Mmx" firstAttribute="top" secondItem="ZiO-1l-jdB" secondAttribute="bottom" constant="8" id="rQR-d9-JGa"/>
+                <constraint firstItem="CxX-Zg-wZw" firstAttribute="top" secondItem="nWP-9S-Mmx" secondAttribute="top" id="t11-bu-vqo"/>
+                <constraint firstAttribute="trailing" secondItem="CxX-Zg-wZw" secondAttribute="trailing" constant="20" id="zEb-3E-yDx"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
         </view>

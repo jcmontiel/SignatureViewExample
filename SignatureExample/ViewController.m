@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet SignatureViewController *signatureController;
+@property (strong, nonatomic) IBOutlet SignatureViewController *signatureController2;
 
 @end
 
@@ -21,12 +22,14 @@
 {
     [super viewDidLoad];
     [self.signatureController viewDidLoad];
+    [self.signatureController2 viewDidLoad];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     [self.signatureController viewDidUnload];
+    [self.signatureController2 viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
