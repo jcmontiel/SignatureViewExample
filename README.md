@@ -23,6 +23,12 @@ This example has been updated to better use Interface Builder, taking advantage 
         [self.signatureController viewDidLoad];
 	}
 
+    - (void)viewDidUnload
+	{
+		[super viewDidUnload];
+  
+        [self.signatureController viewDidUnload];
+	}
 
 	- (void) signatureViewController:(SignatureViewController *)viewController didSign:(NSData *)signature;
 	{
