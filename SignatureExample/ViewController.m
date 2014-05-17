@@ -9,32 +9,24 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-@property (strong, nonatomic) IBOutlet UIView *signatureView;
-@property (strong, nonatomic) SignatureViewController *signatureController;
+@property (strong, nonatomic) IBOutlet SignatureViewController *signatureController;
 
 @end
 
 @implementation ViewController
-@synthesize signatureView;
 @synthesize signatureController;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.signatureController = [[SignatureViewController alloc] initWithNibName:@"SignatureView" bundle:nil];
-    self.signatureController.delegate = self;
-    self.signatureController.view.frame = self.signatureView.frame;
-    [self.view insertSubview:self.signatureController.view belowSubview:self.signatureView];
-    [self.signatureView removeFromSuperview];
-    self.signatureView = self.signatureController.view;
+    [self.signatureController viewDidLoad];
 }
 
 - (void)viewDidUnload
 {
-    [self setSignatureView:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    [self.signatureController viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

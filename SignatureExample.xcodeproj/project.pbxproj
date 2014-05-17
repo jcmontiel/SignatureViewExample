@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		52096EBB16F5913700EAB7ED /* fingerTip.png in Resources */ = {isa = PBXBuildFile; fileRef = 52096EB416F5913700EAB7ED /* fingerTip.png */; };
 		52096EBD16F5913700EAB7ED /* SignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52096EB716F5913700EAB7ED /* SignatureView.m */; };
-		52096EBE16F5913700EAB7ED /* SignatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52096EB816F5913700EAB7ED /* SignatureView.xib */; };
 		52096EBF16F5913700EAB7ED /* SignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52096EBA16F5913700EAB7ED /* SignatureViewController.m */; };
 		52096EC116F591EA00EAB7ED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52096EC016F591EA00EAB7ED /* Default-568h@2x.png */; };
 		524CC994158F944000D02843 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524CC993158F944000D02843 /* UIKit.framework */; };
@@ -30,7 +29,6 @@
 		52096EB416F5913700EAB7ED /* fingerTip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fingerTip.png; path = SignatureView/fingerTip.png; sourceTree = "<group>"; };
 		52096EB616F5913700EAB7ED /* SignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignatureView.h; path = SignatureView/SignatureView.h; sourceTree = "<group>"; };
 		52096EB716F5913700EAB7ED /* SignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignatureView.m; path = SignatureView/SignatureView.m; sourceTree = "<group>"; };
-		52096EB816F5913700EAB7ED /* SignatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignatureView.xib; path = SignatureView/SignatureView.xib; sourceTree = "<group>"; };
 		52096EB916F5913700EAB7ED /* SignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignatureViewController.h; path = SignatureView/SignatureViewController.h; sourceTree = "<group>"; };
 		52096EBA16F5913700EAB7ED /* SignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignatureViewController.m; path = SignatureView/SignatureViewController.m; sourceTree = "<group>"; };
 		52096EC016F591EA00EAB7ED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				52096EB416F5913700EAB7ED /* fingerTip.png */,
 				52096EB616F5913700EAB7ED /* SignatureView.h */,
 				52096EB716F5913700EAB7ED /* SignatureView.m */,
-				52096EB816F5913700EAB7ED /* SignatureView.xib */,
 				52096EB916F5913700EAB7ED /* SignatureViewController.h */,
 				52096EBA16F5913700EAB7ED /* SignatureViewController.m */,
 			);
@@ -165,7 +162,7 @@
 		524CC986158F944000D02843 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Em Sevn, LLC";
 			};
 			buildConfigurationList = 524CC989158F944000D02843 /* Build configuration list for PBXProject "SignatureExample" */;
@@ -194,7 +191,6 @@
 				524CC9AA158F944000D02843 /* ViewController_iPhone.xib in Resources */,
 				524CC9AD158F944000D02843 /* ViewController_iPad.xib in Resources */,
 				52096EBB16F5913700EAB7ED /* fingerTip.png in Resources */,
-				52096EBE16F5913700EAB7ED /* SignatureView.xib in Resources */,
 				52096EC116F591EA00EAB7ED /* Default-568h@2x.png in Resources */,
 				52CC68BF16F5A01300C847AA /* README.md in Resources */,
 			);
@@ -249,8 +245,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -265,10 +262,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -278,8 +279,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -287,10 +289,13 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
