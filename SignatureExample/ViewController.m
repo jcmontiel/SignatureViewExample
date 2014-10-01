@@ -22,15 +22,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.signatureController viewDidLoad];
-    [self.signatureController2 viewDidLoad];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    [self.signatureController viewDidUnload];
-    [self.signatureController2 viewDidUnload];
+    [self addChildViewController:self.signatureController];
+    [self addChildViewController:self.signatureController2];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -44,22 +37,6 @@
         return YES;
     }
 }
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-    [signatureController willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-    [signatureController2 willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-}
-
--  (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-    [signatureController didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-    [signatureController2 didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-}
-
-
 
 #pragma mark SignatureViewController delegate methods
 - (void) signatureViewController:(SignatureViewController *)viewController didSign:(NSData *)signatureData;
