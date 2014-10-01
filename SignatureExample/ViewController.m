@@ -22,15 +22,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self addChildViewController:self.signatureController];
-    [self addChildViewController:self.signatureController2];
+    if (self.signatureController)
+        [self addChildViewController:self.signatureController];
+    
+    if (self.signatureController2)
+        [self addChildViewController:self.signatureController2];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) 
     {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+        return (interfaceOrientation != UIInterfaceOrientationPortrait);
     }
     else 
     {
