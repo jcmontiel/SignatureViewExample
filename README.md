@@ -16,27 +16,32 @@ Here is an example of how to implement the SignatureViewController and it's sign
 This example has been updated to better use Interface Builder, taking advantage of Autolayout.
 
 	//
-	- (void)viewDidLoad
-	{
-		[super viewDidLoad];
-  
-        [self.signatureController viewDidLoad];
-	}
+    - (void)viewDidLoad
+    {
+        [super viewDidLoad];
+        if (self.signatureController)
+            [self addChildViewController:self.signatureController];
 
-    - (void)viewDidUnload
-	{
-		[super viewDidUnload];
-  
-        [self.signatureController viewDidUnload];
-	}
+        if (self.signatureController2)
+            [self addChildViewController:self.signatureController2];
+    }
 
-	- (void) signatureViewController:(SignatureViewController *)viewController didSign:(NSData *)signature;
-	{
-		NSData *thisSignature = signature;
-		// 
-		// Do something with thisSignature, like save it to a file or a database as binary data.
-		//
-	}
+    - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+    {
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) 
+        {
+            return (interfaceOrientation != UIInterfaceOrientationPortrait);
+        }
+            else 
+        {
+            return YES;
+        }
+    }
+
+    - (void) signatureViewController:(SignatureViewController *)viewController didSign:(NSData *)signatureData;
+    {
+        NSLog(@"signatureData: %@",signatureData.description);
+    }
 
 LICENSE
 -------
