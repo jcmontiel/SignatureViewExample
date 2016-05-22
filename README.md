@@ -26,27 +26,18 @@ This example has been updated to better use Interface Builder, taking advantage 
             [self addChildViewController:self.signatureController2];
     }
 
-    - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-    {
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) 
-        {
-            return (interfaceOrientation != UIInterfaceOrientationPortrait);
-        }
-            else 
-        {
-            return YES;
-        }
-    }
-
-    - (void) signatureViewController:(SignatureViewController *)viewController didSign:(NSData *)signatureData;
-    {
+    - (void) signatureViewController:(SignatureViewController *)viewController didSign:(NSData *)signatureData {
         NSLog(@"signatureData: %@",signatureData.description);
+    }
+    
+    - (void) didNotSignatureViewController:(SignatureViewController *)viewController {
+        NSLog(@"handle tapping sign with no signature");
     }
 
 LICENSE
 -------
 
-Copyright (C) 2012 by Em Sevn, LLC
+Copyright (C) 2012-2016 by Montiel Mobile, LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
