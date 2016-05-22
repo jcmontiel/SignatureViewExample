@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F3503E93DCB0E3FC5407BA646D05CCB50C3D286A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F3503E93DCB0E3FC5407BA646D05CCB50C3D286A" : 0,
+    "7FEFAB7B4E7B3B6CBB11E0E43542DC76218AF35E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8B241DE9-053A-4D6A-9DF5-FD5C3F6F6F0D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F3503E93DCB0E3FC5407BA646D05CCB50C3D286A" : "SignatureViewExample\/",
+    "7FEFAB7B4E7B3B6CBB11E0E43542DC76218AF35E" : "SignatureViewExample\/SignatureView\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SignatureExample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SignatureExample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jcmontiel\/SignatureView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7FEFAB7B4E7B3B6CBB11E0E43542DC76218AF35E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jcmontiel\/SignatureViewExample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F3503E93DCB0E3FC5407BA646D05CCB50C3D286A"
+    }
+  ]
+}

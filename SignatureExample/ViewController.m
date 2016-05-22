@@ -19,8 +19,8 @@
 @synthesize signatureController2;
 
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
     if (self.signatureController)
         [self addChildViewController:self.signatureController];
@@ -29,23 +29,37 @@
         [self addChildViewController:self.signatureController2];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) 
-    {
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        
         return (interfaceOrientation != UIInterfaceOrientationPortrait);
     }
-    else 
-    {
+    else  {
+        
         return YES;
     }
 }
 
 #pragma mark SignatureViewController delegate methods
-- (void) signatureViewController:(SignatureViewController *)viewController didSign:(NSData *)signatureData;
-{
+
+- (void) signatureViewController:(SignatureViewController *)viewController didSign:(NSData *)signatureData {
+    
     NSLog(@"signatureData: %@",signatureData.description);
 }
 
+- (void)didNotSignInSignatureViewController:(SignatureViewController *)viewController {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Signature" message:@"Please sign" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [alertController addAction:okAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 
 @end
