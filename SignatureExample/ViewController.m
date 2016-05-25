@@ -22,11 +22,16 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    if (self.signatureController)
+    if (self.signatureController) {
+        self.signatureController.signatureTextField.text = @"You sign here";
         [self addChildViewController:self.signatureController];
+    }
     
-    if (self.signatureController2)
+    if (self.signatureController2) {
+        
+        self.signatureController2.signatureTextField.text = @"Spouse sign here";
         [self addChildViewController:self.signatureController2];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
